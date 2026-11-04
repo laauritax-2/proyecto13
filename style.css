@@ -1,0 +1,118 @@
+/* Hace que el ancho incluya también el borde y el relleno. */
+* {
+  box-sizing: border-box; /* Facilita calcular los tamaños. */
+}
+
+/* Estilos generales de toda la página. */
+body {
+  margin: 0; /* Quita el margen predeterminado. */
+  font-family: Arial, sans-serif; /* Define el tipo de letra. */
+  background-color: #f1f3f5; /* Coloca un fondo gris claro. */
+  color: #333333; /* Define el color del texto. */
+}
+
+/* Centra el acordeón en la pantalla. */
+.contenedor {
+  min-height: 100vh; /* Ocupa como mínimo toda la altura. */
+  display: flex; /* Activa la distribución flexible. */
+  justify-content: center; /* Centra horizontalmente. */
+  align-items: center; /* Centra verticalmente. */
+  padding: 25px 15px; /* Deja espacio en los bordes. */
+}
+
+/* Caja blanca que contiene las preguntas. */
+.acordeon {
+  width: 100%; /* Usa el ancho disponible. */
+  max-width: 650px; /* Evita que sea demasiado ancho. */
+  padding: 30px; /* Deja espacio por dentro. */
+  background-color: white; /* Pone fondo blanco. */
+  border: 1px solid #dddddd; /* Dibuja un borde fino. */
+  border-radius: 8px; /* Redondea las esquinas. */
+}
+
+/* Da formato al título principal. */
+h1 {
+  margin: 0; /* Quita el margen exterior. */
+  text-align: center; /* Centra el texto. */
+  font-size: 28px; /* Define el tamaño del título. */
+  color: #303b46; /* Cambia el color del título. */
+}
+
+/* Texto que explica cómo usar el acordeón. */
+.introduccion {
+  margin: 10px 0 25px; /* Separa el texto de otros elementos. */
+  text-align: center; /* Centra la instrucción. */
+  color: #666666; /* Usa un gris para el texto. */
+  font-size: 14px; /* Ajusta el tamaño de letra. */
+}
+
+/* Cada pregunta y su respuesta forman un bloque. */
+.elemento {
+  margin-bottom: 10px; /* Separa un bloque del siguiente. */
+  border: 1px solid #d8dce0; /* Dibuja el borde del bloque. */
+  border-radius: 6px; /* Redondea las esquinas. */
+  overflow: hidden; /* Evita que el contenido salga del borde. */
+}
+
+/* Estilos de los botones de las preguntas. */
+.pregunta {
+  width: 100%; /* Ocupa todo el ancho del bloque. */
+  padding: 16px; /* Deja espacio alrededor del texto. */
+  display: flex; /* Permite separar pregunta y símbolo. */
+  justify-content: space-between; /* Manda el símbolo al extremo derecho. */
+  align-items: center; /* Centra los elementos verticalmente. */
+  border: none; /* Quita el borde predeterminado del botón. */
+  background-color: #f8f9fa; /* Da un fondo gris muy claro. */
+  color: #333333; /* Define el color de la pregunta. */
+  text-align: left; /* Alinea la pregunta a la izquierda. */
+  font-size: 15px; /* Define el tamaño del texto. */
+  cursor: pointer; /* Muestra la mano al pasar el mouse. */
+}
+
+/* Cambia el fondo cuando el mouse pasa por la pregunta. */
+.pregunta:hover {
+  background-color: #eef1f3; /* Resalta el botón. */
+}
+
+/* Muestra dónde está el foco al usar el teclado. */
+.pregunta:focus-visible {
+  outline: 2px solid #527b67; /* Dibuja un borde de enfoque. */
+  outline-offset: -3px; /* Coloca el borde dentro del botón. */
+}
+
+/* Da formato al signo más o menos. */
+.flecha {
+  margin-left: 12px; /* Separa el símbolo de la pregunta. */
+  font-size: 22px; /* Hace más grande el símbolo. */
+  color: #527b67; /* Cambia el color del símbolo. */
+}
+
+/* Estilos del texto de las respuestas. */
+.respuesta {
+  padding: 5px 16px 15px; /* Deja espacio alrededor del contenido. */
+  background-color: white; /* Mantiene el fondo blanco. */
+  color: #555555; /* Define el color del texto. */
+  font-size: 14px; /* Ajusta el tamaño de letra. */
+  line-height: 1.6; /* Separa las líneas para leer mejor. */
+}
+
+/* Ajusta los márgenes del párrafo de respuesta. */
+.respuesta p {
+  margin: 8px 0 0; /* Deja espacio arriba del texto. */
+}
+
+/* Cambios para pantallas pequeñas. */
+@media (max-width: 480px) {
+  .acordeon {
+    padding: 22px 16px; /* Reduce el espacio interior. */
+  }
+
+  h1 {
+    font-size: 24px; /* Reduce el tamaño del título. */
+  }
+
+  .pregunta {
+    padding: 14px 12px; /* Reduce el espacio del botón. */
+    font-size: 14px; /* Ajusta el texto a la pantalla. */
+  }
+}

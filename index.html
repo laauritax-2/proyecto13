@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Indica que usamos HTML5. -->
+<html lang="es"> <!-- Define que el contenido está en español. -->
+<head> <!-- Inicia la información de la página. -->
+  <meta charset="UTF-8"> <!-- Permite mostrar tildes y ñ. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la página a celulares. -->
+  <title>Preguntas frecuentes</title> <!-- Texto que aparece en la pestaña. -->
+  <link rel="stylesheet" href="style.css"> <!-- Conecta el archivo de estilos. -->
+</head> <!-- Termina la información de la página. -->
+<body> <!-- Inicia el contenido visible. -->
+  <main class="contenedor"> <!-- Contenedor principal de la página. -->
+    <section class="acordeon"> <!-- Agrupa todo el acordeón. -->
+      <h1>Preguntas frecuentes</h1> <!-- Título principal. -->
+      <p class="introduccion">Selecciona una pregunta para ver su respuesta.</p> <!-- Instrucción para el usuario. -->
+
+      <!-- Cada elemento contiene un botón y su respuesta. -->
+      <div class="elemento"> <!-- Primer bloque del acordeón. -->
+        <button class="pregunta" type="button" aria-expanded="false" aria-controls="respuesta1"> <!-- Botón de la primera pregunta. -->
+          ¿Qué es un acordeón? <!-- Texto de la pregunta. -->
+          <span class="flecha" aria-hidden="true">+</span> <!-- Signo que indica que está cerrado. -->
+        </button> <!-- Termina el botón. -->
+        <div class="respuesta" id="respuesta1" hidden> <!-- Respuesta oculta al iniciar. -->
+          <p>Es un componente que permite mostrar u ocultar información al seleccionar un encabezado.</p> <!-- Texto de la respuesta. -->
+        </div> <!-- Termina la primera respuesta. -->
+      </div> <!-- Termina el primer bloque. -->
+
+      <div class="elemento"> <!-- Segundo bloque del acordeón. -->
+        <button class="pregunta" type="button" aria-expanded="false" aria-controls="respuesta2"> <!-- Botón de la segunda pregunta. -->
+          ¿Para qué sirve JavaScript? <!-- Texto de la pregunta. -->
+          <span class="flecha" aria-hidden="true">+</span> <!-- Signo de pregunta cerrada. -->
+        </button> <!-- Termina el botón. -->
+        <div class="respuesta" id="respuesta2" hidden> <!-- Respuesta oculta al iniciar. -->
+          <p>JavaScript agrega interacción a la página, como abrir y cerrar las respuestas del acordeón.</p> <!-- Texto de la respuesta. -->
+        </div> <!-- Termina la segunda respuesta. -->
+      </div> <!-- Termina el segundo bloque. -->
+
+      <div class="elemento"> <!-- Tercer bloque del acordeón. -->
+        <button class="pregunta" type="button" aria-expanded="false" aria-controls="respuesta3"> <!-- Botón de la tercera pregunta. -->
+          ¿Se puede abrir más de una pregunta? <!-- Texto de la pregunta. -->
+          <span class="flecha" aria-hidden="true">+</span> <!-- Signo de pregunta cerrada. -->
+        </button> <!-- Termina el botón. -->
+        <div class="respuesta" id="respuesta3" hidden> <!-- Respuesta oculta al iniciar. -->
+          <p>No. En este proyecto solo puede estar abierta una respuesta a la vez. Al abrir otra, la anterior se cierra.</p> <!-- Texto de la respuesta. -->
+        </div> <!-- Termina la tercera respuesta. -->
+      </div> <!-- Termina el tercer bloque. -->
+
+      <div class="elemento"> <!-- Cuarto bloque del acordeón. -->
+        <button class="pregunta" type="button" aria-expanded="false" aria-controls="respuesta4"> <!-- Botón de la cuarta pregunta. -->
+          ¿Funciona en celulares? <!-- Texto de la pregunta. -->
+          <span class="flecha" aria-hidden="true">+</span> <!-- Signo de pregunta cerrada. -->
+        </button> <!-- Termina el botón. -->
+        <div class="respuesta" id="respuesta4" hidden> <!-- Respuesta oculta al iniciar. -->
+          <p>Sí. El diseño se adapta a pantallas pequeñas para facilitar su lectura y uso.</p> <!-- Texto de la respuesta. -->
+        </div> <!-- Termina la cuarta respuesta. -->
+      </div> <!-- Termina el cuarto bloque. -->
+    </section> <!-- Termina el acordeón. -->
+  </main> <!-- Termina el contenedor principal. -->
+  <script src="script.js"></script> <!-- Conecta el archivo JavaScript. -->
+</body> <!-- Termina el contenido visible. -->
+</html> <!-- Termina el documento HTML. -->
